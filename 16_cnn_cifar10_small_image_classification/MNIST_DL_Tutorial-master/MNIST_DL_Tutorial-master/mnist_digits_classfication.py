@@ -49,11 +49,11 @@ for i in range(10):
 
 """# Prepare Data"""
 
-# Normalize Data
+
 x_train = x_train / 255.0
 x_test = x_test / 255.0
 
-# Reshape Data
+
 x_train = x_train.reshape(x_train.shape[0], -1)
 x_test = x_test.reshape(x_test.shape[0], -1)
 print(x_train.shape)
@@ -86,7 +86,7 @@ y_pred_classes = np.argmax(y_pred, axis=1)
 print(y_pred)
 print(y_pred_classes)
 
-# Single Example
+
 random_idx = np.random.choice(len(x_test))
 x_sample = x_test[random_idx]
 y_true = np.argmax(y_test, axis=1)
@@ -119,11 +119,10 @@ y_pred_errors_probability = np.max(y_pred_errors, axis=1)
 true_probability_errors = np.diagonal(np.take(y_pred_errors, y_true_errors, axis=1))
 diff_errors_pred_true = y_pred_errors_probability - true_probability_errors
 
-# Get list of indices of sorted differences
 sorted_idx_diff_errors = np.argsort(diff_errors_pred_true)
 top_idx_diff_errors = sorted_idx_diff_errors[-5:] # 5 last ones
 
-# Show Top Errors
+
 num = len(top_idx_diff_errors)
 f, ax = plt.subplots(1, num, figsize=(30,30))
 
