@@ -48,42 +48,7 @@ Edit
 - Results visualized with graphs and confusion matrices  
 - CNNs significantly outperformed ANNs on CIFAR-10 due to spatial feature extraction  
 
-## 🚀 Getting Started
 
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/image-digit-classification.git
-cd image-digit-classification
-2. Set Up Environment
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Run Training
-For ANN:
-bash
-Copy
-Edit
-python train_ann.py --dataset mnist
-python train_ann.py --dataset cifar10
-For CNN:
-bash
-Copy
-Edit
-python train_cnn.py --dataset mnist
-python train_cnn.py --dataset cifar10
-4. Evaluate Models
-bash
-Copy
-Edit
-python evaluate_model.py --model saved_model.h5 --dataset mnist
-📊 Sample Results
-Dataset	Model	Accuracy
-MNIST	ANN	98.1%
-MNIST	CNN	99.2%
-CIFAR-10	ANN	~45%
-CIFAR-10	CNN	78-85%
 
 🔧 Technologies & Tools
 Languages: Python
